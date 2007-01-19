@@ -15,6 +15,7 @@ BuildRequires:	gstreamer-devel >= 0.10
 BuildRequires:  gtk-doc
 BuildRequires:	libjingle-devel
 BuildRequires:	libtool
+BuildRequires:	sofia-sip-devel >= 0.11.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -73,4 +74,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_includedir}/*
 %{_pkgconfigdir}/*.pc
+%attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/farsight-0.1/lib*.so
+%{_libdir}/farsight-0.1/lib*.la
