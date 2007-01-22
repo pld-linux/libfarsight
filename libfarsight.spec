@@ -8,18 +8,19 @@ Group:		Libraries
 Source0:  	%{name}-%{version}.tar.bz2
 # Source0-md5:	7bab6f21b231262d36c58a37c82d3807
 URL:		http://farsight.sourceforge.net/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	glib2-devel >= 1:2.6.0
 BuildRequires:	gnet-devel >= 2.0.7
 BuildRequires:	gstreamer-devel >= 0.10
-BuildRequires:	gtk-doc
-BuildRequires:	libjingle-devel
+BuildRequires:	gtk-doc >= 1.5
+BuildRequires:	libjingle-devel >= 0.3
 BuildRequires:	libtool
-BuildRequires:	sofia-sip-devel >= 0.11.5
+BuildRequires:	pkgconfig
+BuildRequires:	sofia-sip-devel >= 1.11.6
 Requires:	glib2 >= 1:2.6.0
 Requires:	gnet >= 2.0.7
-Requires:	sofia-sip >= 0.11.5
+Requires:	sofia-sip >= 1.11.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -53,6 +54,8 @@ Summary:	Headers for development using FarSight framework
 Summary(pl):	Pliki nag³ówkowe szkieletu FarSight
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	glib2-devel >= 1:2.6.0
+Requires:	gstreamer-devel >= 0.10
 
 %description devel
 Headers of FarSight for development.
@@ -78,6 +81,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+rm -f $RPM_BUILD_ROOT%{_libdir}/farsight-0.1/*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -90,8 +95,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/farsight
 %dir %{_libdir}/farsight-0.1
 %attr(755,root,root) %{_libdir}/farsight-0.1/lib*.so
-# rm if not needed
-%{_libdir}/farsight-0.1/lib*.la
 
 %files devel
 %defattr(644,root,root,755)
