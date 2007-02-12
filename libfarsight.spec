@@ -1,5 +1,5 @@
 Summary:	An audio/video conferencing framework
-Summary(pl.UTF-8):   Szkielet do konferencji audio/video
+Summary(pl.UTF-8):	Szkielet do konferencji audio/video
 Name:		libfarsight
 Version:	0.1.8
 Release:	0.1
@@ -51,7 +51,7 @@ tych, którzy nie chcą osadzać feedów w GUI komunikatora.
 
 %package devel
 Summary:	Headers for development using FarSight framework
-Summary(pl.UTF-8):   Pliki nagłówkowe szkieletu FarSight
+Summary(pl.UTF-8):	Pliki nagłówkowe szkieletu FarSight
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	glib2-devel >= 1:2.6.0
