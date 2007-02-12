@@ -1,5 +1,5 @@
 Summary:	An audio/video conferencing framework
-Summary(pl):	Szkielet do konferencji audio/video
+Summary(pl.UTF-8):   Szkielet do konferencji audio/video
 Name:		libfarsight
 Version:	0.1.8
 Release:	0.1
@@ -37,21 +37,21 @@ interfacing with the Instant Messenger GUI. There will also be a
 default GUI for those who don't wish to embed the feeds into their
 Instant Messenger's GUI.
 
-%description -l pl
+%description -l pl.UTF-8
 FarSight to szkielet do konferencji audio/video zaprojektowany
-szczegÛlnie z my∂l± o komunikatorach. Jego celem jest zapewnienie
-struktury kodu bÍd±cego w stanie obj±Ê jak najwiÍcej protoko≥Ûw
-konferencyjnych z obrazem. Oferuje takøe interfejs do tych
-komunikatorÛw, pozwalaj±c osadzaÊ ich feedy i sterowanie obrazem.
+szczeg√≥lnie z my≈õlƒÖ o komunikatorach. Jego celem jest zapewnienie
+struktury kodu bƒôdƒÖcego w stanie objƒÖƒá jak najwiƒôcej protoko≈Ç√≥w
+konferencyjnych z obrazem. Oferuje tak≈ºe interfejs do tych
+komunikator√≥w, pozwalajƒÖc osadzaƒá ich feedy i sterowanie obrazem.
 
-FarSight nie jest samodzieln± aplikacj±. UdostÍpnia dwa API: jedno do
-wspÛ≥pracy z rÛønymi "modu≥ami protoko≥Ûw" i jedno do wspÛ≥pracy z
-graficznym interfejsem komunikatora. BÍdzie takøe domy∂lne GUI dla
-tych, ktÛrzy nie chc± osadzaÊ feedÛw w GUI komunikatora.
+FarSight nie jest samodzielnƒÖ aplikacjƒÖ. Udostƒôpnia dwa API: jedno do
+wsp√≥≈Çpracy z r√≥≈ºnymi "modu≈Çami protoko≈Ç√≥w" i jedno do wsp√≥≈Çpracy z
+graficznym interfejsem komunikatora. Bƒôdzie tak≈ºe domy≈õlne GUI dla
+tych, kt√≥rzy nie chcƒÖ osadzaƒá feed√≥w w GUI komunikatora.
 
 %package devel
 Summary:	Headers for development using FarSight framework
-Summary(pl):	Pliki nag≥Ûwkowe szkieletu FarSight
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe szkieletu FarSight
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	glib2-devel >= 1:2.6.0
@@ -60,8 +60,8 @@ Requires:	gstreamer-devel >= 0.10
 %description devel
 Headers of FarSight for development.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe szkieletu FarSight.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe szkieletu FarSight.
 
 %prep
 %setup -q -n farsight-%{version}
